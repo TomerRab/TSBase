@@ -1,5 +1,4 @@
 "use strict";
-const array = [];
 function getAvarage(array) {
     let sum = 0;
     let avg = 0;
@@ -18,4 +17,18 @@ function getAmountOfPositive(array) {
     });
     return amount;
 }
-console.log(getAmountOfPositive([70, 80, 100, -1, -5, 65, 80]));
+function sortList(array) {
+    return array.sort(function (a, b) { return a - b; });
+}
+function getInputByUser() {
+    var _a, _b;
+    const arr = [];
+    (_a = document.getElementById("addNum")) === null || _a === void 0 ? void 0 : _a.addEventListener("click", () => {
+        const input = document.getElementById("add");
+        arr.push(Number(input === null || input === void 0 ? void 0 : input.value));
+    });
+    (_b = document.getElementById("submit")) === null || _b === void 0 ? void 0 : _b.addEventListener("click", () => {
+        console.log(sortList(arr));
+    });
+}
+getInputByUser();

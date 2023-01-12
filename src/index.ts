@@ -1,6 +1,3 @@
-const array: number[] = [];
-
-
 function getAvarage(array : number[]) : number{
 
     let sum = 0;
@@ -24,4 +21,21 @@ function getAmountOfPositive(array : number[]) : number{
     return amount;
 }
 
-console.log(getAmountOfPositive([70, 80,100, -1, -5, 65, 80]));
+function sortList(array : number[]): number[]{
+        return array.sort(function(a, b){return a - b});
+}
+
+
+function getInputByUser() : void{
+    
+    const arr : number[] = [];
+    document.getElementById("addNum")?.addEventListener("click",()=>{
+        const input = document.getElementById("add") as HTMLInputElement | null;
+        arr.push(Number(input?.value));
+    })
+    document.getElementById("submit")?.addEventListener("click",()=>{
+        console.log(sortList(arr));
+    });
+}
+
+getInputByUser();
