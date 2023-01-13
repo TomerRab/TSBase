@@ -28,7 +28,7 @@ function getInputByUser() {
         arr.push(Number(input === null || input === void 0 ? void 0 : input.value));
     });
     (_b = document.getElementById("submit")) === null || _b === void 0 ? void 0 : _b.addEventListener("click", () => {
-        console.log(sortList(arr));
+        console.log(getAvarage(arr));
     });
 }
 getInputByUser();

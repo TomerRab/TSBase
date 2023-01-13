@@ -34,7 +34,7 @@ function getInputByUser() : void{
         arr.push(Number(input?.value));
     })
     document.getElementById("submit")?.addEventListener("click",()=>{
-        console.log(sortList(arr));
+        console.log(getAmountOfPositive(arr));
     });
 }
 
